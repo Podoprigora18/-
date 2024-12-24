@@ -90,10 +90,31 @@
     </footer>
 
 <div style="position: fixed; bottom: 20px; right: 20px;">
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
-          style="padding: 10px; background-color: rgb(158, 236, 164); color: white; border: none; border-radius: 5px; cursor: pointer; font-family: Times New Roman;" color: white; border: none; border-radius: 5px; cursor: pointer;">
-    Вернуться в начало
-  </button>
+    <button class="back-to-top">Вернуться в начало</button>
+    <script>
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            const scrollStep = -window.scrollY / 15;
+            const scrollInterval = setInterval(() => {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 16);
+        }
+
+        backToTopButton.addEventListener('click', scrollToTop);
+    </script>
 </div>
 
 <script>
