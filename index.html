@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МирСобытий</title> <!-- Изменено название -->
+    <title>Мероприятия</title>
     <link rel="stylesheet" href="style.css">
     <style>
         *{
@@ -17,7 +17,6 @@
     </style> 
 </head>
 <body>
-    
     <header>
         <div class="container" align="center">
             <nav class="prig">
@@ -141,45 +140,69 @@
 
     </footer>    
 
-    <div style="position: fixed; bottom: 20px; right: 20px;">
-        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
-                style="padding: 10px; background-color: rgb(158, 236, 164); color: white; border: none; border-radius: 5px; cursor: pointer; font-family: Times New Roman;">
-            Вернуться в начало
-        </button>
-    </div>
-
+<div style="position: fixed; bottom: 20px; right: 20px;">
+    <button class="back-to-top">Вернуться в начало</button>
     <script>
-        // Theme toggling logic
-        document.addEventListener("DOMContentLoaded", () => {
-          const toggleButton = document.getElementById("theme-toggle");
-          const currentTheme = localStorage.getItem("theme") || "light";
-          document.body.classList.toggle("dark-theme", currentTheme === "dark");
-          toggleButton.textContent = currentTheme === "dark" ? "Светлая тема" : "Тёмная тема";
-      
-          toggleButton.addEventListener("click", () => {
-            const isDark = document.body.classList.toggle("dark-theme");
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-            toggleButton.textContent = isDark ? "Светлая тема" : "Тёмная тема";
-          });
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
         });
-      </script>
 
-    <button id="theme-toggle">Тёмная тема</button>
+        function scrollToTop() {
+            const scrollStep = -window.scrollY / 15;
+            const scrollInterval = setInterval(() => {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 16);
+        }
 
-    <div class="feedback-form" >
-      <h2>Обратная связь</h2>
-      <form action="#" method="post" class="forma">
-        <label for="name" class="labell">Имя:</label>
-        <input type="text" id="name" name="name" placeholder="Ваше имя" required class="inputtt">
+        backToTopButton.addEventListener('click', scrollToTop);
+    </script>
+</div>
 
-        <label for="email" class="labell">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Ваш email" required class="inputtt">
+<script>
+  // Theme toggling logic
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme") || "light";
+    document.body.classList.toggle("dark-theme", currentTheme === "dark");
+    toggleButton.textContent = currentTheme === "dark" ? "Светлая тема" : "Тёмная тема";
 
-        <label for="message" class="labell">Сообщение:</label>
-        <textarea id="message" name="message" placeholder="Ваше сообщение" required rows="5" class="inputtt"></textarea>
+    toggleButton.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-theme");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      toggleButton.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    });
+  });
+</script>
 
-        <button type="submit" class="sumbit">Отправить</button>
-      </form>
-    </div>
+<button id="theme-toggle">Тёмная тема</button>
+
+<div class="feedback-form" >
+  <h2>Обратная связь</h2>
+  <form action="#" method="post" class="forma">
+    <label for="name" class="labell">Имя:</label>
+    <input type="text" id="name" name="name" placeholder="Ваше имя" required class="inputtt">
+
+    <label for="email" class="labell">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ваш email" required class="inputtt">
+
+    <label for="message" class="labell">Сообщение:</label>
+    <textarea id="message" name="message" placeholder="Ваше сообщение" required rows="5" class="inputtt"></textarea>
+
+    <button type="submit" class="sumbit">Отправить</button>
+  </form>
+</div>
+
+        
+    
 </body>
 </html>
