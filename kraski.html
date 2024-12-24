@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КРАСКИ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:rgb(255, 244, 232);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" align="center">
+            <nav class="prig">
+                <a href="index.html" class="prig">ГЛАВНАЯ</a>
+            </nav>
+            <nav class="text">
+                <a>КРАСКИ</a>
+            </nav>
+            <nav class="prig">
+                <a href="#part4" class="prig">КАРТА</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="textcontainer2">
+            <div class="textinblock">
+                <nav class="textleft">
+                    <p>Фестиваль красок — это не только праздник, но и возможность отметить единство и радость жизни, насладиться общением с людьми и погрузиться в атмосферу весны и обновления.</p>
+                </nav>
+                <nav>
+                    <img src="img/image 10.png">
+                </nav>
+            </div>
+            <div class="textinblock">
+                <nav>
+                    <img src="img/image 11.png">
+                </nav>
+                <nav class="textright">
+                    <p>Фестиваль красок, также известный как Холи, — это яркое и красочное событие, которое отмечается в различных странах, особенно в Индии и Непале. </p>
+                </nav>
+            </div>
+            <div class="textinblock">
+                <nav class="textleft">
+                    <p>Этот фестиваль символизирует приход весны, победу добра над злом и единство людей. Вот несколько ключевых аспектов фестиваля красок:</p>
+                </nav>
+                <nav>
+                    <img src="img/image 12.png">
+                </nav>
+            </div>
+        </div>
+        <div class="text">
+            <p>пятница - 16:00</p>
+        </div>
+        <div class="text">
+            <a name="part4"></a>
+            <p class="megacolor">КАРТА</p>
+        </div>
+        <div align="center">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6183f7095cdeacf92da039c61aeb8b4251b8f136172769a0f34b32d2c5eb97c1&amp;source=constructor" width="1300" height="600" frameborder="0"></iframe>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+        <div class="containerInfo">
+            <div>
+                <p class="textinfo">НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
+                <nav class="containerforimg">
+                    <a href="https://web.telegram.org/"><img src="img/telegram 2.png" class="mainimg"></a>
+                    <a href="https://vk.com/"><img src="img/vk 2.png" class="mainimg"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youtube 2.png" class="mainimg"></a>
+                </nav>
+            </div>
+            <dvi class="textinfo">
+                <p align="center">ПОЧТА</p>
+                <p class="infoFooter">meroprit@mera.ru</p>
+            </dvi>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+<div style="position: fixed; bottom: 20px; right: 20px;">
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+          style="padding: 10px; background-color: rgb(158, 236, 164); color: white; border: none; border-radius: 5px; cursor: pointer; font-family: Times New Roman;" color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Вернуться в начало
+  </button>
+</div>
+
+<script>
+  // Theme toggling logic
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme") || "light";
+    document.body.classList.toggle("dark-theme", currentTheme === "dark");
+    toggleButton.textContent = currentTheme === "dark" ? "Светлая тема" : "Тёмная тема";
+
+    toggleButton.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-theme");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      toggleButton.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    });
+  });
+</script>
+<style>
+  /* Dark theme styles */
+  .dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  /* Toggle button styles */
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+<button id="theme-toggle">Тёмная тема</button>
+
+<div class="feedback-form" >
+  <h2>Обратная связь</h2>
+  <form action="#" method="post" class="forma">
+    <label for="name" class="labell">Имя:</label>
+    <input type="text" id="name" name="name" placeholder="Ваше имя" required class="inputtt">
+
+    <label for="email" class="labell">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ваш email" required class="inputtt">
+
+    <label for="message" class="labell">Сообщение:</label>
+    <textarea id="message" name="message" placeholder="Ваше сообщение" required rows="5" class="inputtt"></textarea>
+
+    <button type="submit" class="sumbit">Отправить</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    background-color:rgb(158, 236, 164);
+    font-weight: bold;
+    min-height: 200px;
+    border-radius: 0 0 46px 46px;
+    color: black;
+
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+    
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+}
+header a{
+    font-size: 64px;
+    text-decoration: none;
+    color: black;
+}
+main .containernext a{
+    
+    text-decoration: none;
+    color: black;
+    background-color: #CCFFDA;
+    border-radius: 16px;
+    
+}
+
+.prig{
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.prig:hover{
+    transform: translateY(-5px);
+}
+.textcontainer{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    padding: 50px;
+}
+.textcontainer2{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.textinblock{
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+    padding: 50px;
+}
+.textcolor{
+    background-color: #CCFFDA;
+    border-radius: 16px;
+    padding: 10px;
+    border: solid black;
+}
+.text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+    
+}
+.textleft{
+    padding-right: 40px;
+}
+.textright{
+    padding-left: 40px;
+}
+.simpltext{
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+}
+.containernext{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+   
+}
+.containernext2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textforimg{
+    text-align: center;
+    font-size: 48px;
+    
+    padding-top: 50px;
+   
+    
+}
+.megacolor{
+    background-color: rgb(158, 236, 164);
+    margin: 0;
+}
+iframe{
+    padding-top: 75px;
+}
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    -webkit-margin-before: 22px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 75px;
+    -webkit-margin-end: 75px;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    border: 1px solid black ;
+   
+}
+.hr{
+    padding-top: 50px;
+    
+}
+.textinfo{
+    font-family: Inter;
+    font-size: 20px;
+}
+main .containerInfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 150px;
+}
+.containerforimg{
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainimg{
+    width: 60px;
+    margin: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.mainimg:hover{
+    transform: translateY(-5px);
+}
+.infoFooter{
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.infoFooter:hover{
+    transform: translateY(-5px);
+}
+/* Dark theme styles */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  /* Toggle button styles */
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgb(158, 236, 164);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: initial;
+  }
+  .forma {
+    display: flex;
+    flex-direction:
+    column; gap: 15px;
+  }
+  .labell {
+    font-weight: bold;
+  }
+  .inputtt {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+  }
+  .sumbit {
+    padding: 10px; 
+    background-color: rgb(158, 236, 164); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: Times New Roman;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+  }
+  .feedback-form {
+    padding: 10px;
+    background-color: rgb(158, 236, 164);
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: Times New Roman;
+  }
