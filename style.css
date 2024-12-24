@@ -221,3 +221,12 @@ main .containerInfo{
     cursor: pointer; 
     font-family: Times New Roman;
   }
+ .back-to-top {
+    padding: 10px; 
+    background-color: rgb(158, 236, 164); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: Times New Roman"
+  }
